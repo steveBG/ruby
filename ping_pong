@@ -1,0 +1,32 @@
+class Fixnum
+  define_method(:ping_pong) do
+
+  table_tennis=[]
+
+  cust_num.+(1)
+
+  cust_num.times() do |number|
+
+    if number.eql?(0)
+      table_tennis.push(0)
+    else
+      remainder_3=number.%(3)
+      remainder_5=number.%(5)
+
+      ping=remainder_3.eql?(0)
+      pong=remainder_5.eql?(0)
+
+      if ping.&(pong)
+        table_tennis.push("ping-pong")
+      elsif ping
+        table_tennis.push("ping")
+      elsif pong
+        table_tennis.push("pong")
+      else
+        table_tennis.push(number)
+      end
+    end
+  end
+  end
+  table_tennis
+end
